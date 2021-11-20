@@ -1,4 +1,4 @@
-package main
+package generics
 
 import (
 	"fmt"
@@ -14,7 +14,7 @@ func myMap[T any, U any](arr *[]T, fn func(T) U) []U {
 	return result
 }
 
-func main() {
+func RunGenerics() {
 	numbers := &[]int{1, 2, 3}
 
 	fmt.Println(myMap(numbers, func(i int) int {
